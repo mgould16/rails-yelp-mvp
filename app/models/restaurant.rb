@@ -1,3 +1,4 @@
+# dependent destroy means we destory the reviews if the restaurant is deleted.
 class Restaurant < ApplicationRecord
   has_many :reviews, dependent: :destroy
   validates :name, uniqueness: true, presence: true

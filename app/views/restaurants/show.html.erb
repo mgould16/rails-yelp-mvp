@@ -1,8 +1,10 @@
+<!-- This form takes the restaurant name, then iterates over each review and displays them -->
+<!--  The review.content and review.rating are params that we require (see reviews_controller) -->
 <h1>My Restaurant </h1>
 
 <p> <%= @restaurant.name %>
 <%= link_to "Create review", new_restaurant_review_path(@restaurant) %>
 </p>
-<p><% @restaurant.reviews.each do |review| %></p>
+<% @restaurant.reviews.each do |review| %>
 <p><%= review.content %> <%= review.rating %></p>
 <% end %>
